@@ -1,0 +1,56 @@
+Movement     	= Complete
+Inventory    	= Complete
+Stats        	= Half Complete   	#need to work out how health, defence and damage are going to be calculated.
+Items        	= Half Complete		#programming side is complete. need to make the actual items.
+Combat       	= Not Complete    	#make the world stop during combat. turn based.
+Map          	= Half Complete   	#programming side is complete. need to build the city itself.
+Equipment    	= Not Complete    	#need to allow the user and npcs to equip stuff.
+Apartments   	= Not Complete    	#allow player and npcs to own apartments. Complete alongside Map.
+Employment   	= Not Complete    	#allow player and npcs to get jobs. npc jobs will be based on distance away.
+Crafting     	= Not Complete    	#allow player to craft every item in the game. Crafting for npcs will be automated through factories.
+Security     	= Not Complete    	#citywide police force, cameras, other stuff to make a thief's job harder and to protect people.
+Skills       	= Not Complete    	#various skills to do with all aspects of the game.
+Vehicles     	= Not Complete    	#faster travel, can be used manually or automated through gps. will act as a teleporter for saved gps pos.
+Map Position 	= Not Complete		#give each room an x,y,z position for use with vehicles.
+NPC Interaction = Not Complete		#allow player to talk to and interact with any passive NPC.
+Shops			= Not Complete		#change some cells into shops for player to buy and sell stuff.
+Economy			= Not Complete		#all production and manufacturing processes will link together Ex. farm(wheat) -> mill(flour) -> bakery(bread)
+									#economy must always be able to support population. could add on 10% or make it so 1 person can only buy 1 piece
+									#of food to stop the player from buying up everything. unless it only displays the excess.
+Population		= Not Complete		#population will be equal to amount of workforce needed. gender will stay as close to 50/50 as possible.
+Time/Date		= Not Complete		#set up time of day aswell as dates. time may be set to real world time or slighty faster.
+Schedules		= Not Complete		#people will have schedules to work to. 
+	//Work Schedule:	8:01am - 10:00am, break 15mins, 10:16am - 12:15am, lunch 30mins, 12:46pm - 2:45pm, break 15mins, 3:01pm - 5:00pm.
+	//Resting Schedule:	breakfast 7:01am - 8:00am -> Work Schedule -> free time 5:01pm - 10:00pm, sleep 10:01pm - 7:00am
+
+
+inventory to be switched over to new style:
+    commands are entered.
+    pickup in right hand or left if the right has something in it (assuming its not too heavy).
+
+
+command=None, object=None, command2=None, object2=None, command3=None, object3=None
+
+get           dufflebag
+get           white        dufflebag
+get           dagger       from           dufflebag
+get           dagger       from           white         dufflebag
+get           silver       dagger         from          dufflebag
+get           silver       dagger         from          white          dufflebag
+
+get           dagger       in             dufflebag
+get           silver       dagger         in            dufflebag
+get           dagger       in             white         dufflebag
+get           silver       dagger         in            white          dufflebag
+
+List of commands:
+get X
+drop X
+put X
+look X
+examine X
+wear
+remove
+craft
+mine
+chop
